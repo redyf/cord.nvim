@@ -1,3 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
+# Determine the appropriate shebang based on the operating system
+if [[ -f /etc/NIXOS ]]; then
+    echo "Running on NixOS, using #!/usr/bin/env bash"
+else
+    echo "Running on a different OS, using #!/bin/sh"
+fi
+
+# Execute the build commands
 rustc --crate-type=cdylib -C opt-level=3 -C panic=abort -C lto=fat -o cord src/lib.rs
