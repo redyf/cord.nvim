@@ -89,7 +89,7 @@ pub fn get<'a>(
             }
         }
         "typescript" => ("typescript", "TypeScript"),
-        "typescriptreact" => ("react", "TSX"),
+        "typescriptreact" => ("tsx", "TSX"),
         "v" => ("v", "V "),
         "vim" => ("vim", "VimL"),
         "vue" => ("vue", "Vue"),
